@@ -1,0 +1,29 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<main class="auth layout">
+  <div class="container">
+    <div class="layout__box">
+      <div class="layout__boxHeader">
+        <div class="layout__boxTitle">
+          <h3>Logout</h3>
+        </div>
+      </div>
+      <div class="layout__body">
+        <h2 class="auth__tagline" style="text-align: left;">Are you sure want to Logout?</h2>
+        <form class="form" action="" method="post">
+            {% csrf_token %}
+            <a href="{{previous_page}}">Go, back</a>
+            <button class="btn btn--main" type="submit">
+            Logout
+            </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}
+
+
+
